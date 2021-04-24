@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // The `/api/products` endpoint
-
 // get all products
 router.get('/', async (req, res) => {
   // find all products
@@ -48,6 +47,7 @@ router.post('/', async (req, res) => {
       price: 200.00,
       stock: 3,
       tagIds: [1, 2, 3, 4]
+      category_id:
     }
   */
   Product.create(req.body)
