@@ -1,6 +1,5 @@
 # RESTful E-Commerce Back End Server
 
-![Change to alt text](changeToImageLink)
 ## Description
 
 This repository is a functioning back end server file for an e-commerce site. Express.js, Sequelize, and MySQL database technologies are the basis for this back end. By using this back end with front end code that provides and recieves JSON data, information can be easily stored across multiple MySQL tables that have communication facilitated between each other with this back end server.
@@ -21,9 +20,6 @@ To install necessary dependencies, run the following command:
 
     npm i
 
-To install necessary seed data, run the following command afterwards:
-
-    npm run seed
 
 To install necessary MySQL data, run the following commands within a MySQL workbench:
 
@@ -33,7 +29,13 @@ To install necessary MySQL data, run the following commands within a MySQL workb
     -- CREATE DATABASE
     CREATE DATABASE ecommerce_db;
 
+The above MySQL code is also available within [the schema.sql file in the folder title 'db.'](./db/schema.sql)
    
+
+After MySQL set up of database, install necessary seed data with the following command afterwards:
+
+    npm run seed
+
 ## Usage
 
 To utilize the server, run the following command:
@@ -45,10 +47,7 @@ After running node server.js within an integrated terminal, the CRUD APIs may be
 
 ### Demo
 
-[Click for a video demonstrating the functionality in more detail](https://drive.google.com/file/d/1ZvbxLg1bM7OlixsJE4jXFacsPYuW-GtG/view?usp=sharing)
-
-
-![Change to alt text](changeToImageLink)
+[Click for a video demonstrating the functionality in more detail](https://drive.google.com/file/d/1gnug5T8auch_9dvOnoBGZVRnFq-3tR/view?usp=drivesdk)
 
 ---  
 

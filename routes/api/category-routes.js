@@ -13,9 +13,6 @@ router.get('/', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-
-
-
 });
 
 // GET Category by ID
@@ -45,7 +42,6 @@ router.post('/', async (req, res) => {
   } catch (err) {
     res.status(400).json(err);
   }
-
 });
 
 // UPDATE Category by ID
