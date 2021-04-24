@@ -47,8 +47,7 @@ After running node server.js within an integrated terminal, the CRUD APIs may be
 
 ### Demo
 
-[Click for a video demonstrating the functionality in more detail](https://drive.google.com/file/d/1gnug5T8auch_9dvOnoBGZVRnFq-3tR/view?usp=drivesdk)
-
+[Click for a video demonstrating the functionality in more detail](https://drive.google.com/file/d/1gnug5T8auch_9dvOnoBGZVRnFq-3tRz7/view?usp=sharing)
 ---  
 
 ## Contribute
