@@ -3,12 +3,10 @@ const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
 
+//GET All Categories
 router.get('/', async (req, res) => {
-  // find all categories  
-  // be sure to include its associated Products
   try {
     const categoryData = await Category.findAll({
-      // Add Product as a second model to JOIN with
       include: [{ model: Product }],
     });
     res.status(200).json(categoryData);
@@ -20,12 +18,10 @@ router.get('/', async (req, res) => {
 
 });
 
+// GET Category by ID
 router.get('/:id', async (req, res) => {
-  // find one category by its `id` value
-  // be sure to include its associated Products
   try {
     const categoryData = await Category.findByPk(req.params.id, {
-      // Add Book as a second model to JOIN with
       include: [{ model: Product }],
     });
 
@@ -40,6 +36,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+//CREATE New Category
 router.post('/', async (req, res) => {
   // create a new category
   try {
@@ -51,32 +48,27 @@ router.post('/', async (req, res) => {
 
 });
 
+// UPDATE Category by ID
 router.put('/:id', (req, res) => {
-  // update a category by its `id` value
 
   Category.update(
     {
-      // All the fields you can update and the data attached to the request body.
       category_name: req.body.category_name  
     },
     {
-      // Gets the books based on the isbn given in the request parameters
       where: {
         id: req.params.id,
       },
     }
   )
     .then((updatedCategory) => {
-      // Sends the updated book as a json response
       res.json(updatedCategory);
     })
     .catch((err) => res.json(err));
-  ///////////////////////////////////////////
-
 });
 
+//DELETE Category by ID
 router.delete('/:id', async (req, res) => {
-  // delete a category by its `id` value
   try {
     const categoryData = await Category.destroy({
       where: {
@@ -93,7 +85,6 @@ router.delete('/:id', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-
 });
 
 module.exports = router;
